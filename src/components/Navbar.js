@@ -37,9 +37,10 @@ export default function Navbar() {
         <Button
           variant="contained"
           startIcon={<CallIcon />}
+          onClick={() => (window.location.href = "tel:+919876543210")}
           className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-5 py-2 rounded-full shadow-lg hidden md:flex"
         >
-          Get a Call
+          Call Now
         </Button>
       </Toolbar>
 
@@ -54,9 +55,10 @@ export default function Navbar() {
           <Button
             variant="contained"
             startIcon={<CallIcon />}
+            onClick={() => (window.location.href = "tel:+919876543210")}
             className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-5 py-2 rounded-full shadow-lg"
           >
-            Get a Call
+            Call Now
           </Button>
         </div>
       )}
