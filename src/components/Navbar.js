@@ -13,7 +13,7 @@ export default function Navbar() {
       <Toolbar className="flex justify-between items-center px-6 md:px-16">
         {/* Logo */}
         <Typography variant="h5" className="font-bold text-white tracking-wide">
-          Sushruta Consultancy
+          Swasthya Health
         </Typography>
 
         {/* Mobile Menu Button */}
