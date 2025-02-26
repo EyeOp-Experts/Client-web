@@ -55,7 +55,7 @@ const FormButton = () => {
           onClick={handleOpen}
           className="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 font-semibold text-sm uppercase tracking-wide"
         >
-          Get Call Now
+          Get A Call
         </button>
       </div>
 

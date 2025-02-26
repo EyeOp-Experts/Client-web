@@ -33,7 +33,7 @@ export default function Hero() {
         </div>
 
         {/* Right Side - Form */}
-        <Form className="hidden md:block" buttonText={"GET BEST COST"} />
+        <Form className="hidden md:block" buttonText={"Book Appointment Now"} />
       </div>
     </section>
   );

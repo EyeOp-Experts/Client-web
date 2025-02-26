@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+import Image from "next/image";
+
 import lasikImage from "@/utils/Lasik.webp";
 import cataractImage from "@/utils/Cataract.webp";
 import retinaImage from "@/utils/Retinal.webp";
@@ -27,7 +29,7 @@ export default function SurgerySection() {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % surgeries.length);
       setTransitioning(false);
-    }, 500); // Ensure smooth transition
+    }, 500);
   };
 
   const prevSlide = () => {
@@ -45,13 +47,13 @@ export default function SurgerySection() {
   }, []);
 
   return (
-    <section className="w-full h-[550px] flex flex-col items-center justify-center bg-gray-100 text-gray-900 relative overflow-hidden">
+    <section className="w-full h-[550px] flex flex-col items-center justify-center  bg-gradient-to-b from-[#E2E8F0] to-[#CBD5E1] text-gray-900 relative overflow-hidden">
       {/* 🔹 Heading */}
       <h2 className="text-3xl font-bold text-center mb-6">
         Types of Surgeries We Provide
       </h2>
 
-      <div className="relative w-full max-w-[95%] md:max-w-[85%] h-[400px] md:h-[450px] flex items-center justify-center overflow-hidden">
+      <div className="relative w-full max-w-[95%] md:max-w-[85%] h-[450px] flex items-center justify-center overflow-hidden">
         {/* Image Container with Smooth Transition */}
         <div
           className="absolute w-full h-full flex transition-transform duration-300 ease-in-out"
@@ -63,10 +65,13 @@ export default function SurgerySection() {
             <div key={index} className="w-full h-full flex-shrink-0">
               <div className="w-full h-full rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-300 flex items-center justify-center">
                 <div className="w-full h-full relative">
-                  <img
-                    src={surgery.image.src}
+                  <Image
+                    src={surgery.image}
                     alt={surgery.title}
-                    className="absolute w-full h-full object-cover object-center"
+                    layout="fill"
+                    objectFit="cover" // ✅ Ensures image fits properly
+                    loading="lazy"
+                    className="absolute w-full h-full"
                   />
                   <div className="absolute bottom-0 left-0 bg-gradient-to-t from-black via-black/70 to-transparent p-4 text-white w-full">
                     <h3 className="text-xl font-semibold tracking-wide">
