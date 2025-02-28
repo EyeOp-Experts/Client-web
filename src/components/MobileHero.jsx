@@ -4,7 +4,7 @@ export default function MobileFormSection() {
   return (
     <section className="bg-gray-100 p-6 md:hidden">
       {/* Form Section */}
-      <Form title="Get in Touch" buttonText={"GET BEST COST"} className="mt-6 mx-auto" />
+      <Form title="Get in Touch" buttonText={"Book Appointment Now"} className="mt-6 mx-auto" />
 
       {/* Supporting Text */}
       <h2 className="text-3xl font-extrabold text-center text-gray-900 mt-6">
