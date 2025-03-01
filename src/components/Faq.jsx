@@ -74,7 +74,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-gradient-to-b from-[#E3F2FD] to-[#BBDEFB] rounded-xl shadow-xl">
+    <div className="max-w-4xl mx-auto p-6 bg-gradient-to-b from-[#fef9e7] to-[#fef9e7] rounded-xl shadow-xl">
       {/* 🔹 Heading */}
       <Typography variant="h4" className="text-center mb-6 font-bold text-blue-900">
         Frequently Asked Questions
@@ -91,7 +91,7 @@ const FAQ = () => {
             expandIcon={<ExpandMoreIcon className="text-blue-600" />}
             aria-controls={`${faq.id}-content`}
             id={`${faq.id}-header`}
-            className="bg-[#E3F2FD] hover:bg-[#BBDEFB] transition-all rounded-lg px-4 py-2"
+            className="bg-[#D3D3D3] hover:bg-[#b1b6ba] transition-all rounded-lg px-4 py-2"
           >
             <Typography className="font-semibold text-gray-900">{faq.question}</Typography>
           </AccordionSummary>
