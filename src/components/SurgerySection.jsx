@@ -47,7 +47,7 @@ export default function SurgerySection() {
   }, []);
 
   return (
-    <section className="w-full h-[550px] flex flex-col items-center justify-center  bg-gradient-to-b from-[#E2E8F0] to-[#CBD5E1] text-gray-900 relative overflow-hidden">
+    <section className="w-full h-[550px] flex flex-col items-center justify-center  bg-gradient-to-b from-[#fef9e7] to-[#fef9e7] text-gray-900 relative overflow-hidden">
       {/* 🔹 Heading */}
       <h2 className="text-3xl font-bold text-center mb-6">
         Types of Surgeries We Provide
