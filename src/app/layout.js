@@ -40,6 +40,7 @@ export default function Layout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* SEO Meta Tags */}
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Swasthya Health" />
@@ -47,6 +48,19 @@ export default function Layout({ children }) {
         <meta name="geo.placename" content="Delhi NCR" />
         <meta name="geo.position" content="28.6139;77.2090" />
         <meta name="ICBM" content="28.6139, 77.2090" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        {/* External Stylesheets (if needed) */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+
+        {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
