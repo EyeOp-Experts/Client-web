@@ -36,7 +36,7 @@ export default function Navbar() {
             variant="h6"
             className="text-white font-bold font-serif tracking-wide text-xs md:text-2xl leading-snug text-center md:text-left"
           >
-            <span className="text-white">VISIONARY</span>
+            <span className="text-white">SWASTHYA HEALTH</span>
           </Typography>
         </div>
 
