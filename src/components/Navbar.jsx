@@ -5,7 +5,7 @@ import { AppBar, Toolbar, Button, IconButton, Typography } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState, useEffect } from "react";
-import logo from "@/utils/logo_transparent.png"; // ✅ Use the transparent logo
+import logo from "@/utils/logo_transparent.png";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,10 +18,10 @@ export default function Navbar() {
   return (
     <AppBar
       position="sticky"
-      className="bg-gradient-to-r from-blue-900 to-blue-700 shadow-lg"
+      className="bg-gradient-to-r from-blue-900 to-blue-700 shadow-lg !important"
     >
       <Toolbar className="flex justify-between items-center px-4 md:px-16 min-h-[50px] py-1">
-        {/* 🔹 Left Side: Logo (Hidden on Mobile) + Name */}
+        {/* 🔹 Left Side: Website Name (Adjusted for Mobile) */}
         <div className="flex items-center space-x-2">
           {/* Logo (Hidden on Mobile) */}
           <div className="hidden md:block"> {/* Hide logo on mobile */}
@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Website Name (Smaller on Mobile) */}
           <Typography
             variant="h6"
-            className="text-white font-bold font-serif tracking-wide text-sm md:text-2xl leading-snug text-center md:text-left"
+            className="text-white font-bold font-serif tracking-wide text-xs md:text-2xl leading-snug text-center md:text-left"
           >
             <span className="text-white">SWASTHYA HEALTH</span>
           </Typography>
@@ -53,7 +53,7 @@ export default function Navbar() {
           >
             {"Home"}
           </Link>
-          {["Blogs", "About"].map((item, index) => (
+          {"Blogs About".split(" ").map((item, index) => (
             <Link
               key={index}
               href={`/${item.toLowerCase()}`}
@@ -68,19 +68,19 @@ export default function Navbar() {
             variant="contained"
             startIcon={<CallIcon />}
             onClick={() => (window.location.href = "tel:+919818996967")}
-            className="hidden md:flex" // 🔹 Visible only on large screens
+            className="hidden md:flex"
             sx={{
-              backgroundColor: "#facc15", // yellow-400
-              color: "#1e40af", // blue-800
+              backgroundColor: "#facc15",
+              color: "#1e40af",
               "&:hover": {
-                backgroundColor: "#fde047", // yellow-300
+                backgroundColor: "#fde047",
               },
               fontWeight: "bold",
               padding: "8px 16px",
               borderRadius: "9999px",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              textTransform: "none", // 🔹 Prevents uppercase transformation
-              fontSize: "1rem", // 🔹 Adjust font size for large screens
+              textTransform: "none",
+              fontSize: "1rem",
             }}
           >
             Call Now
@@ -89,24 +89,25 @@ export default function Navbar() {
 
         {/* 🔹 Mobile Navigation (Call Now + Menu) */}
         <div className="flex items-center md:hidden space-x-2">
-          {/* Call Now Button (Visible only on mobile) */}
+          {/* Call Now Button (Full Width for Mobile) */}
           <Button
             variant="contained"
             startIcon={<CallIcon />}
             onClick={() => (window.location.href = "tel:+919818996967")}
-            className="flex md:hidden" // 🔹 Visible only on mobile screens
+            className="flex md:hidden w-full justify-center"
             sx={{
-              backgroundColor: "#facc15", // yellow-400
-              color: "#1e40af", // blue-800
+              backgroundColor: "#facc15",
+              color: "#1e40af",
               "&:hover": {
-                backgroundColor: "#fde047", // yellow-300
+                backgroundColor: "#fde047",
               },
               fontWeight: "bold",
-              padding: "6px 12px", // 🔹 Smaller padding for mobile
+              padding: "6px 16px",
               borderRadius: "9999px",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              textTransform: "none", // 🔹 Prevents uppercase transformation
-              fontSize: "0.875rem", // 🔹 Smaller font size for mobile
+              textTransform: "none",
+              fontSize: "0.875rem",
+              whiteSpace: "nowrap",
             }}
           >
             Call Now

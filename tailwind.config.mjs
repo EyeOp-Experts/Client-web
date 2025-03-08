@@ -11,7 +11,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(to right, #1e3a8a, #2563eb)", // Custom dark blue to light blue
+      },
     },
   },
+  safelist: [
+    "bg-gradient-to-r",
+    "from-blue-900",
+    "to-blue-700",
+  ], // ✅ Prevents Tailwind from purging gradient classes
   plugins: [],
 };
