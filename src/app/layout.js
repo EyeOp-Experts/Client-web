@@ -47,6 +47,12 @@ export default function Layout({ children }) {
         <meta name="geo.placename" content="Delhi NCR" />
         <meta name="geo.position" content="28.6139;77.2090" />
         <meta name="ICBM" content="28.6139, 77.2090" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
