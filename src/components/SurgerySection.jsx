@@ -11,11 +11,11 @@ import corneaImage from "@/utils/Corneal.webp";
 import pediatricImage from "@/utils/Pediatric.webp";
 
 const surgeries = [
-  { image: lasikImage, title: "LASIK Surgery", link: "/lasik" },
-  { image: cataractImage, title: "Cataract Surgery", link: "/cataract" },
+  { image: lasikImage, title: "LASIK Surgery", link: "/blogs/lasik" },
+  { image: cataractImage, title: "Cataract Surgery", link: "/blogs/cataract-surgery-complete-guide" },
   { image: retinaImage, title: "Retina Treatment", link: "/retina" },
-  { image: glaucomaImage, title: "Glaucoma Care", link: "/glaucoma" },
-  { image: corneaImage, title: "Corneal Transplant", link: "/cornea" },
+  { image: glaucomaImage, title: "Glaucoma Care", link: "/blogs/glaucoma" },
+  { image: corneaImage, title: "Corneal Transplant", link: "/blogs/corneal-transplant" },
   { image: pediatricImage, title: "Pediatric Eye Care", link: "/pediatric" },
 ];
 
