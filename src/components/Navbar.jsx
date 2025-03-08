@@ -42,7 +42,13 @@ export default function Navbar() {
 
         {/* 🔹 Desktop Navigation (Visible on larger screens) */}
         <div className="hidden md:flex space-x-6 items-center">
-          {["Home", "Blogs", "About"].map((item, index) => (
+          <Link
+            href={`/`}
+            className="text-white text-lg font-medium hover:text-yellow-300 transition duration-300"
+          >
+            {"Home"}
+          </Link>
+          {["Blogs", "About"].map((item, index) => (
             <Link
               key={index}
               href={`/${item.toLowerCase()}`}
@@ -56,7 +62,7 @@ export default function Navbar() {
           <Button
             variant="contained"
             startIcon={<CallIcon />}
-            onClick={() => (window.location.href = "tel:+919876543210")}
+            onClick={() => (window.location.href = "tel:+919818996967")}
             className="hidden md:flex" // 🔹 Visible only on large screens
             sx={{
               backgroundColor: "#facc15", // yellow-400
@@ -81,7 +87,7 @@ export default function Navbar() {
           <Button
             variant="contained"
             startIcon={<CallIcon />}
-            onClick={() => (window.location.href = "tel:+919876543210")}
+            onClick={() => (window.location.href = "tel:+919818996967")}
             className="flex md:hidden" // 🔹 Visible only on mobile screens
             sx={{
               backgroundColor: "#facc15", // yellow-400

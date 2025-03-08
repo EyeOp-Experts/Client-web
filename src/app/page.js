@@ -4,8 +4,9 @@ import MobileHero from "@/components/MobileHero";
 import SurgerySection from "@/components/SurgerySection";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
-import CallButton from "@/components/CallButton";
+
 import FormButton from "@/components/FormButton";
+import WhatsAppButton from "@/components/CallButton";
 export default function Home() {
   return (
     <main className="p-0 m-0">
@@ -16,7 +17,7 @@ export default function Home() {
   <HappyCustomers/>
   <Faq/>
   <Footer/>
-  <CallButton/>
+  <WhatsAppButton/>
   <FormButton/>
 </main>
 
