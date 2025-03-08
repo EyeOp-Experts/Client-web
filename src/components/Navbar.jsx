@@ -21,20 +21,25 @@ export default function Navbar() {
       className="bg-gradient-to-r from-blue-900 to-blue-700 shadow-lg"
     >
       <Toolbar className="flex justify-between items-center px-4 md:px-16 min-h-[50px] py-1">
-        {/* 🔹 Left Side: Logo + Name */}
+        {/* 🔹 Left Side: Logo (Hidden on Mobile) + Name */}
         <div className="flex items-center space-x-2">
-          <Image
-            src={logo}
-            alt="Visionary Logo"
-            width={40} // ✅ Smaller logo in mobile
-            height={40}
-            className="object-contain md:w-[50px] md:h-[50px]" // ✅ Different sizes for mobile & desktop
-            priority={false} // ✅ Do not prioritize loading for performance
-            loading="lazy" // ✅ Lazy loading for optimization
-          />
+          {/* Logo (Hidden on Mobile) */}
+          <div className="hidden md:block"> {/* Hide logo on mobile */}
+            <Image
+              src={logo}
+              alt="Visionary Logo"
+              width={40}
+              height={40}
+              className="object-contain md:w-[50px] md:h-[50px]"
+              priority={false}
+              loading="lazy"
+            />
+          </div>
+
+          {/* Website Name (Smaller on Mobile) */}
           <Typography
             variant="h6"
-            className="text-white font-bold font-serif tracking-wide text-xs md:text-2xl leading-snug text-center md:text-left"
+            className="text-white font-bold font-serif tracking-wide text-sm md:text-2xl leading-snug text-center md:text-left"
           >
             <span className="text-white">SWASTHYA HEALTH</span>
           </Typography>
@@ -84,6 +89,7 @@ export default function Navbar() {
 
         {/* 🔹 Mobile Navigation (Call Now + Menu) */}
         <div className="flex items-center md:hidden space-x-2">
+          {/* Call Now Button (Visible only on mobile) */}
           <Button
             variant="contained"
             startIcon={<CallIcon />}
