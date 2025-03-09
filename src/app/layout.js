@@ -2,15 +2,14 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "Swasthya Health",
+  title: "Swasthya Health - Best LASIK & Cataract Surgery Consultancy in Delhi NCR",
   description:
     "Looking for the best LASIK, cataract, or refractive eye surgery in Delhi NCR? Swasthya Health connects you with top-rated eye hospitals in Noida, Gurugram, Faridabad & Greater Noida – 100% free consultation with expert guidance.",
   keywords:
     "LASIK surgery Delhi NCR, best eye hospital Delhi, cataract surgery Noida, affordable eye surgery Gurugram, eye specialist Faridabad, laser eye treatment Delhi, PRK surgery, SMILE surgery, vision correction, eye care consultancy, top ophthalmologists in Delhi, glaucoma treatment, corneal transplant Delhi, best refractive surgery, eye surgeon near me, Delhi NCR eye hospitals, astigmatism treatment, myopia correction",
 
   openGraph: {
-    title:
-      "Best LASIK & Cataract Surgery Consultancy in Delhi NCR | Swasthya Health",
+    title: "Swasthya Health - Best LASIK & Cataract Surgery Consultancy in Delhi NCR",
     description:
       "Swasthya Health offers expert guidance for LASIK, cataract, and advanced eye surgeries in Delhi NCR. No extra charges, just the best connections to trusted eye hospitals.",
     url: "https://visionpluss.in/",
@@ -28,8 +27,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "Best LASIK & Cataract Surgery Consultancy in Delhi NCR | Swasthya Health",
+    title: "Swasthya Health - Best LASIK & Cataract Surgery Consultancy in Delhi NCR",
     description:
       "Find the best LASIK and cataract surgery options in Delhi NCR with expert consultancy at Swasthya Health. We connect you to top hospitals in Noida, Gurugram, and Faridabad.",
     images: ["https://visionpluss.in/images/clinic-thumbnail.jpg"],
@@ -40,6 +38,9 @@ export default function Layout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Set Title and Meta Description for SEO */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Swasthya Health" />
@@ -48,11 +49,26 @@ export default function Layout({ children }) {
         <meta name="geo.position" content="28.6139;77.2090" />
         <meta name="ICBM" content="28.6139, 77.2090" />
 
-        {/* Favicon */}
+        {/* Favicon Links - Ensure these files exist in /public folder */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
 
+        {/* OpenGraph Meta Tags for Social Media */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* JSON-LD Schema Markup for Google */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
