@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-6 mt-auto">
       <Container maxWidth="lg">
         <Typography variant="body2" className="text-center">
-          &copy; {new Date().getFullYear()} Sushruta Consultancy. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Swasthya Health. All Rights Reserved.
         </Typography>
         <Box mt={2} textAlign="center">
           <Typography variant="body2">

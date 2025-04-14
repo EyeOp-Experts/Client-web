@@ -53,7 +53,7 @@ export default function Navbar() {
           >
             {"Home"}
           </Link>
-          {"Blogs About".split(" ").map((item, index) => (
+          {"Blogs about".split(" ").map((item, index) => (
             <Link
               key={index}
               href={`/${item.toLowerCase()}`}
