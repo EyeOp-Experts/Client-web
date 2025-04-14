@@ -6,25 +6,26 @@ import rahulImage from "@/utils/main-image.webp";
 import snehaImage from "@/utils/main-image.webp";
 import amitImage from "@/utils/main-image.webp";
 import priyaImage from "@/utils/main-image.webp";
+import jatinImage from "@/utils/jkPhoto.jpg";
 
 const testimonials = [
   {
-    name: "Rahul Mehta",
+    name: "Jatin Kumar",
     review: "The LASIK surgery was a life-changer. The staff was very professional, and the process was smooth!",
-    image: rahulImage,
+    image: jatinImage,
   },
   {
-    name: "Sneha Kapoor",
+    name: "Saket Jha",
     review: "Cataract surgery was painless, and my vision is better than ever. Highly recommend this place!",
     image: snehaImage,
   },
   {
-    name: "Amit Sharma",
+    name: "Dhruv Gupta",
     review: "The doctors were kind and explained everything well. Retina treatment was successful!",
     image: amitImage,
   },
   {
-    name: "Priya Verma",
+    name: "Sachin Verma",
     review: "Excellent care and advanced technology made my cornea transplant seamless. Thank you!",
     image: priyaImage,
   },

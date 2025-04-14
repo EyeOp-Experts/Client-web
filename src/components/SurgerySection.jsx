@@ -13,10 +13,10 @@ import pediatricImage from "@/utils/Pediatric.webp";
 const surgeries = [
   { image: lasikImage, title: "LASIK Surgery", link: "/blogs/lasik" },
   { image: cataractImage, title: "Cataract Surgery", link: "/blogs/cataract-surgery-complete-guide" },
-  { image: retinaImage, title: "Retina Treatment", link: "/retina" },
+  { image: retinaImage, title: "Retina Treatment", link: "/blogs/retina-treatment" },
   { image: glaucomaImage, title: "Glaucoma Care", link: "/blogs/glaucoma" },
   { image: corneaImage, title: "Corneal Transplant", link: "/blogs/corneal-transplant" },
-  { image: pediatricImage, title: "Pediatric Eye Care", link: "/pediatric" },
+  { image: pediatricImage, title: "Pediatric Eye Care", link: "/blogs/pediatric-eye-care" },
 ];
 
 export default function SurgerySection() {
